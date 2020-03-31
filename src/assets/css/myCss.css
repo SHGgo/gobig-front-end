@@ -1,0 +1,192 @@
+/*****************text-start*******************/
+.gray-xs {
+    font-size: 0.6rem;
+    color: #777777;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.gray-sm {
+    font-size: 0.85rem;
+    color: #777777;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.gray-md {
+    font-size: 1rem;
+    color: #555;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.gray-xl {
+    font-size: 2rem;
+    color: #757575;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.pink-sm {
+    font-size: 0.8rem;
+    line-height: 1rem;
+    color: #fb7299;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.pink-lg {
+    font-size: 2rem;
+    color: #fb7299;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.pink-md {
+    font-size: 1rem;
+    color: #fb7299;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.black-sm {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    color: #212121;
+    /*text-overflow: ellipsis;*/
+    /*overflow: hidden;*/
+    letter-spacing: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.black-md {
+    font-size: 1rem;
+    color: #212121;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: pre-line;
+}
+
+.black-lg {
+    font-size: 1.2rem;
+    color: #212121;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.light-sm {
+    color: #d6dee4;
+    font-size: 0.8rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.light-lg {
+    color: #fff;
+    font-size: 1.2rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.blue-lg{
+    color: #4f8ed3;
+    font-size: 1.2rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.blue-xl{
+    color: #4f8ed3;
+    font-size: 2rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.font-weight-700 {
+    font-weight: 700;
+}
+
+/*****************text-end*******************/
+
+/*****************btn-start*******************/
+
+.btn-pink {
+    color: #ffffff;
+    background: #f25d8e;
+}
+
+/*****************btn-end*******************/
+
+/*****************border-start*******************/
+.border-white-lg {
+    border: 3px solid #fff;
+}
+
+.border-eee-sm {
+    border: 1px solid #eee;
+}
+
+.border-radius-lg {
+    border-radius: 1rem;
+}
+
+.border-radius-md {
+    border-radius: 4px;
+}
+
+.brb-sm {
+    border-radius: 0 0 4px 4px;
+}
+
+.brb-lg {
+    border-radius: 0 0 1rem 1rem;
+}
+
+.bb-gray {
+    border-bottom: 1px solid #e5e9ef;
+}
+
+/*****************border-end*******************/
+
+/*****************box-shadow-start*******************/
+.box-shadow {
+    box-shadow: 0 1px 10px #ccc;
+}
+
+/*****************box-shadow-end*******************/
+/*****************bg-start*******************/
+.bg-white {
+    background-color: #fff;
+}
+
+.bg-light {
+    background-color: #f8f9fa;
+}
+
+.bg-blue{
+    background-color: #00a1d6;
+}
+
+/*****************bg-end*******************/
+/*****************col-start*******************/
+
+
+/*****************col-end*******************/
+/*****************btn-start*******************/
+/*****************btn-end*******************/
+/*****************btn-start*******************/
+/*****************btn-end*******************/
