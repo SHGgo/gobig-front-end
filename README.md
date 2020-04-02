@@ -1,19 +1,11 @@
-# vue-demo1
+# gobig-front-end
 
-## Project setup
-```
-npm install
-```
+- 网站地址：http://www.gobigtonight.top/
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## 整体介绍
+- 用做毕业设计论文，正在进一步开发的个人网站
+- 用 vue + SSM + mysql 实现 前后端完全分离
+- 用 tomcat+ngnix 实现 负载均衡、反向代理、静态分离
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 前端介绍
+- 用vue全家桶搭建包括vue-cli等
