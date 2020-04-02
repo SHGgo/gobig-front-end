@@ -54,6 +54,7 @@
 
 <script>
     import {url} from '../assets/js/utils'
+    import Cookies from 'js-cookie'
     export default {
         name: "largeTop",
         data() {
@@ -84,6 +85,7 @@
                     url: 'user/getUserContent',
                     data: $json,
                     headers: {
+                        'Authorization':localStorage.getItem('token'),
                         'Content-Type': 'application/json; charset=utf-8'
                     }
                 }).then(response => {
@@ -101,37 +103,28 @@
                 });
             },
             userConditionCheck() {
-                axios({
-                    method: 'post',
-                    url: 'user/userConditionCheck',
-                }).then(response => {
-                    // console.log(response);
-                    if (response.data === "logged") {
-                        this.getUserContent();
-                    } else {
-                        this.login = false;
-                    }
-                }).catch(function (error) { // 请求失败处理
-                    console.log(error);
-                });
+                if (!localStorage.getItem('token')){
+                    this.login = false;
+                } else {
+                    axios({
+                        method: 'post',
+                        url: 'user/userConditionCheck',
+                        headers: {
+                            'Authorization':localStorage.getItem('token'),
+                            'Content-Type': 'application/json; charset=utf-8'
+                        }
+                    }).then(response => {
+                        // console.log(response);
+                        if (response.data.status === "200") {
+                            this.getUserContent();
+                        } else {
+                            this.login = false;
+                        }
+                    }).catch(function (error) { // 请求失败处理
+                        console.log(error);
+                    });
+                }
             },
-            // /**
-            //  * 原生js方法处理头图适配
-            //  */
-            // resizeDom(){
-            //     if(window.screen.width<960){
-            //         document.getElementById("bImg").style.height = "5rem";
-            //     }else {
-            //         document.getElementById("bImg").style.height = "10rem";
-            //     }
-            //     window.onresize=()=>{
-            //         if(document.body.clientWidth<960){
-            //             document.getElementById("bImg").style.height = "5rem";
-            //         }else {
-            //             document.getElementById("bImg").style.height = "10rem";
-            //         }
-            //     }
-            // },
         }
     }
 </script>

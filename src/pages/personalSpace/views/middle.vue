@@ -32,7 +32,7 @@
         },
         created() {
             if (this.uid) {
-                this.resizeData()
+                this.resizeData();
                 this.getUserContent(this.uid);
                 this.getUserVideoList(this.uid, userVideoNum);
                 this.getUserVideoCollect(this.uid, videoCollectNum);
