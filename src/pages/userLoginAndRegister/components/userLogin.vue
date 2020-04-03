@@ -26,6 +26,7 @@
 </template>
 
 <script>
+    import Cookies from 'js-cookie'
     export default {
         name: "userLogin",
         data(){
@@ -48,8 +49,6 @@
                 $.cookie("userAccount",this.userAccount,{path:'/'});
                 $.cookie("pwd",this.pwd,{path:'/'});
                 */
-                document.cookie="userAccount="+this.userAccount+";path=/";
-                document.cookie="pwd="+this.pwd+";path=/";
                 let $json = {
                     "userAccount": this.userAccount,
                     "pwd": this.pwd
@@ -69,8 +68,8 @@
                 })
             },
             userLoginResult(res) {
-                if (res === "success") {
-                    alert("登录成功");
+                if (res.status === "200") {
+                    localStorage.setItem("token",res.token);
                     window.location = "/index.html";
                 } else {
                     alert("账号或密码错误！");
