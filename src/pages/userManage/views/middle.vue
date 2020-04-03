@@ -28,13 +28,6 @@
 </script>
 
 <style scoped>
-    /*#middle {*/
-        /*border: 1px solid #ddd;*/
-    /*}*/
-    /*#middle .row .userManage-right {*/
-        /*border-left: 1px solid #ddd;*/
-    /*}*/
-
     .um-left nav .nav-link {
         display: flex;
         justify-content: center;
