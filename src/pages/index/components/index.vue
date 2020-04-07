@@ -1,12 +1,12 @@
 <template>
     <section class="container" id="middle">
         <ul class="row  mt-2 mt-xl-5">
-            <li class="col-6 col-xl mt-4 mt-xl-0 d-flex justify-content-center" v-for="video in videoList">
+            <li class="col-6 col-xl mt-4 mt-xl-0 d-flex justify-content-center" v-for="video in videoList" :key="video.vid">
                 <show-box :data=video></show-box>
             </li>
         </ul>
         <ul class="">
-            <li class="" v-for="sortVideo, key in sortVideoList" style="margin-top: 4rem">
+            <li v-for="(sortVideo, key) in sortVideoList" :key="key" style="margin-top: 4rem">
                 <div class="row">
                     <a class="col-6 mr-auto font-weight-bolder text-info" :href="sortUrlPre+key">
                         <i class="fa fa-ravelry"></i>
@@ -19,9 +19,8 @@
                 <div class="row sortContent mt-3">
                     <div class="col-xl-4 d-xl-block d-none">
                         <div class="big-show-box">
-                            <a target="_blank" :href=playUrlPre+sortVideo[0].vid class="pic">
-                                <img class="img-fluid" :src=sortVideo[0].pic
-                                     alt="">
+                            <a target="_blank" :href="playUrlPre+sortVideo[0].vid" class="pic">
+                                <img class="img-fluid" :src="sortVideo[0].pic" alt="">
                                 <div class="count">
                                     <span>
                                         <i class="fa fa-youtube-play"></i>
@@ -46,7 +45,7 @@
                     <div class="col-12 p-0 col-xl-8">
                         <ul class="row no-gutters h-100 align-content-between">
                             <li class="col-6 col-xl-3 mt-4 mt-xl-0 d-flex justify-content-center"
-                                v-for="video in sortVideo.slice(1,)">
+                                v-for="video in sortVideo.slice(1,)" :key="video.vid">
                                 <show-box :data=video></show-box>
                             </li>
                         </ul>
@@ -116,6 +115,7 @@
                     }
                 }).then(response => {
                     this.sortVideoList = response.data;
+                    console.log(this.sortVideoList)
                 }).catch(function (error) { // 请求失败处理
                     console.log(error);
                 });

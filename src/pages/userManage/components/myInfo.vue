@@ -9,7 +9,7 @@
                            id="nick_name" title="请输入昵称" placeholder="请输入昵称" v-model.lazy="userContent.nickName"/>
                 </div>
                 <small id="nick_name_help" class="form-text offset-md-2 offset-4" ref="nickNameHelp">
-                    最多10位汉字、数字、字母或下划线等字符
+                    最多10位汉字、数字、字母等字符
                 </small>
             </div>
             <div class="form-group">
@@ -29,7 +29,7 @@
                            id="signature" title="设置您的签名" placeholder="设置您的签名- ( ゜- ゜)つロ"/>
                 </div>
                 <small id="signature_help" class="form-text offset-md-2 offset-4" ref="signatureHelp">
-                    最多50位任意字符
+                    最多50位汉字、数字、字母字符
                 </small>
             </div>
             <div class="form-group">
@@ -84,8 +84,8 @@
                 this.userContent.birthDate = moment(bd).format('YYYY-MM-DD');
             },
             checkNewUserContent() {
-                let nickNameReg = new RegExp("^[\\w]{1,10}$");
-                let signatureHelp = new RegExp("^.{1,50}$");
+                let nickNameReg = new RegExp("^[a-zA-Z0-9_-\u4E00-\u9FA5]{1,10}$");
+                let signatureHelp = new RegExp("^[a-zA-Z0-9_-\u4E00-\u9FA5]{1,50}$");
                 //昵称判断
                 if (!nickNameReg.test(this.userContent.nickName)) {
                     this.$refs.nickNameHelp.style.color = "red";
