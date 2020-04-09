@@ -121,15 +121,15 @@
                 }
             },
             fileUploadAfter(status) {
-                if (status === "200") {
+                if (status === 20000) {
                     this.oldFigure = this.figureDataUrl;
                     this.figureDataUrl = '';
                     alert("更新头像成功");
                     window.location.reload();
-                }else if(status === "501"){
+                }else if(status === 50100){
                     //TODO 重新选择头像
                     alert("未知错误，请重新选择头像");
-                }else if(status === "304"){
+                }else if(status === 30400){
                     //TODO 重新登录
                     alert("未知错误，请重新登录");
                 }

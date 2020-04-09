@@ -118,7 +118,7 @@
                 })
             },
             uploadNewUserContentAfter(data){
-                if(data.status === "200"){
+                if(data.status === 20000){
                     alert("更新成功！！！")
                 }else {
                     //TODO
