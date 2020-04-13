@@ -192,8 +192,8 @@
                         'Content-Type': 'application/json;charset=UTF-8'
                     }
                 }).then(response => {
-                    if (response.data.status === "200") {
-                        let vid = response.data.vid;
+                    if (response.data.status === "200"||response.data.status === 20000) {
+                        let vid = response.data.data.vid;
                         this.formData.set("vid", vid);
                         this.uploadVideo(vid);
                     } else {
@@ -223,7 +223,7 @@
                 })
             },
             uploadVideoAfter(data) {
-                if (data.status === "200") {
+                if (data.status === "200"||data.status === 20000) {
                     setTimeout(()=>{
                         alert("更新成功！！！");
                     },1000);
