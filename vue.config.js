@@ -59,6 +59,8 @@ const pages = {
 
 module.exports = {
     pages,
+    assetsDir: 'static',
+    productionSourceMap: false,
     devServer: {
         open: true,
         host: 'localhost',
